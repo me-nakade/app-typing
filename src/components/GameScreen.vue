@@ -45,6 +45,8 @@ function submit() {
     mistakes.value += 1
     if (mistakes.value >= 3) {
       gameOver.value = true
+    } else {
+      next() // 間違えた場合も次の問題へ
     }
   }
   userInput.value = ''
