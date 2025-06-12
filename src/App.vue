@@ -24,6 +24,7 @@ const score = ref(0)
 const mistakes = ref(0)
 const questions = ref([])
 
+//かんたん
 const easyQuestions = [
   'cat',
   'dog',
@@ -56,6 +57,8 @@ const easyQuestions = [
   'grass',
   'cloud',
 ]
+
+//ふつう
 const normalQuestions = [
   'javascript',
   'component',
@@ -89,6 +92,7 @@ const normalQuestions = [
   'international',
 ]
 
+//むずかしい
 const hardQuestions = [
   '義務とは、したくないことをすること',
   '有名人に友達はいません、代わりにマネージャーがいます',
