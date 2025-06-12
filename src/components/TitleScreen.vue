@@ -10,6 +10,10 @@
   <button @click="$emit('start')">スタート</button>
 </template>
 
+<script setup>
+defineEmits(['start'])
+</script>
+
 <style scoped>
 .title-screen {
   text-align: center;
