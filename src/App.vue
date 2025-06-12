@@ -24,22 +24,6 @@ const score = ref(0)
 const mistakes = ref(0)
 const questions = ref([])
 
-/*
-// 出題リスト（編集可）
-const questions = [
-  'hello',
-  'keyboard',
-  '泰然自若',
-  'javascript',
-  '国内総生産',
-  'No sweet without sweat',
-  '光より速いのは、人の噂だけ',
-  '関係者を装う者ほど、大して関係ないものだ',
-  '笑顔は笑顔である、引きつっていても',
-  'The early bird catches the worm',
-]
-  */
-
 const easyQuestions = [
   'cat',
   'dog',
