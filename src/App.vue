@@ -130,8 +130,22 @@ function goToSelectDifficulty() {
   screen.value = 'select'
 }
 
+/*
 function getRandomQuestions(array) {
   array.sort(() => Math.random() - 0.5) // 配列をシャッフル
+  //console.log(array)
+  return array.slice(0, 10) // 最初の10個を返す
+}
+  */
+
+function fisherYatesShuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]] // Swap elements 分割代入というらしい
+  }
+}
+function getRandomQuestions(array) {
+  fisherYatesShuffle(array) // 配列をシャッフル
   //console.log(array)
   return array.slice(0, 10) // 最初の10個を返す
 }
