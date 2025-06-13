@@ -13,7 +13,12 @@
     <div class="info">
       <span>得点: {{ score }}</span>
       <span>ミス: {{ mistakes }}/3</span>
-      <span v-if="!gameOver && !finished">残り時間: {{ timeLeft }}秒</span>
+      <div>
+        <span v-if="!gameOver && !finished && timeLeft > 5">残り時間: {{ timeLeft }}秒</span>
+        <span class="timeLeft" v-else-if="!gameOver && !finished && timeLeft <= 5"
+          >残り時間: {{ timeLeft }}秒</span
+        >
+      </div>
     </div>
     <div v-if="gameOver || finished" class="overlay">
       <button @click="finish">結果を見る</button>
@@ -154,6 +159,12 @@ input[type='text'] {
   gap: 2em;
   justify-content: center;
 }
+
+.timeLeft {
+  color: red;
+  font-weight: bold;
+}
+
 .overlay {
   margin-top: 32px;
 }
